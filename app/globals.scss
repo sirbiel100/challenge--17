@@ -1,0 +1,25 @@
+@import 'var.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100vw;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 600px) {
+  
+  body {
+    background-color: $DarkslateGrey;
+    align-items: center;
+  }
+}

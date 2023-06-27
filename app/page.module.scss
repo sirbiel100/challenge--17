@@ -1,0 +1,215 @@
+@import 'var.scss';
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+    width: 100%;
+
+    .images{
+        width: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    p{
+        font-weight: 400;
+        color: $CharcoalGrey;
+        font-size: 16px;
+    }
+
+    .textContent{
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            h1 {
+                color: $DarkslateGrey;
+                font-size: clamp(2rem, 5vw, 4rem);
+                font-weight: 700
+            }
+        }
+
+        .list{
+            display: flex;
+            align-items: center;
+            gap: .5em;
+        }
+    }
+
+    .form {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        span{
+            font-size: .8rem;
+            font-weight: 700;
+            margin-bottom: .8em;
+        }
+
+        .valido {
+            padding: 1.3em;
+            border-radius: 10px;
+            outline: none;
+            border: 1px solid $Grey;
+            cursor: pointer;
+        }
+
+        .invalido {
+            cursor: pointer;
+            padding: 1.3em;
+            border-radius: 10px;
+            background-color: rgba(255, 0, 0, 0.151);
+            color: rgba(255, 0, 0, 0.685);
+            border: 1px solid rgba(255, 0, 0, 0.884);
+        }
+
+        label {
+            position: absolute;
+            right: 0;
+            color: rgba(255, 0, 0, 0.781);
+        }
+
+        .submitButton {
+            cursor: pointer;
+            padding: 1em;
+            margin-top: 1.5em;
+            background-color: $DarkslateGrey;
+            color: white;
+            font-weight: 700;
+            border: none;
+            border-radius: 10px;
+        }
+        
+    }
+    }
+
+    .success {
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translateX(50%) translateY(-50%);
+        z-index: 1;
+        height: 100vh;
+        height: 100svh; //for browsers that supports svh sizes
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        
+        .subscribe {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5em;
+            max-width: 70vw;
+
+            h2 {
+                font-size: clamp(1.5rem, 5vw, 3rem);
+            }
+        }
+
+        button {
+            max-width: 70vw;
+            width: 100%;
+            cursor: pointer;
+            padding: 1.5em;
+            background-color: $DarkslateGrey;
+            color: white;
+            font-weight: 700;
+            border: none;
+            border-radius: 10px;
+        }
+    }
+
+    .successToggle {
+        display: none;
+    }
+
+}
+
+.desktopImage {
+    display: none;
+}
+
+@media (min-width: 600px) {
+    
+    .section {
+        width: auto;
+        flex-direction: row-reverse;
+        background-color: white;
+        padding: 1.3em 2.5em 1.3em 2.5em;
+        border-radius: 25px;
+        .images {
+            width: auto;
+            .desktopImage{
+                display: block;
+            }
+        }
+
+        .textContent {
+            .form{
+                .submitButton {
+                    padding: 1.3em;
+                    border-radius: 10px;
+                    border: none;
+
+                    &:hover{
+                        background-color: transparent;
+                        background-image: linear-gradient(to right, #fd4c81, $Tomato);
+                        box-shadow: 0 7px 30px 4px hsla(4, 100%, 67%, 0.589);
+                    }
+
+                    &:active {
+                        transform: translateY(3px);
+                    }
+            }
+        }
+        }
+
+        .success {
+            width: auto;
+            height: auto;
+            gap: 4em;
+            padding: 2em;
+            border-radius: 20px;
+            
+            .subscribe {
+                max-width: 80%;
+            }
+    
+            button {
+                max-width: 80%;
+
+                &:hover{
+                    background-color: transparent;
+                    background-image: linear-gradient(to right, #fd4c81, $Tomato);
+                    box-shadow: 0 7px 30px 4px hsla(4, 100%, 67%, 0.589);
+                }
+
+                &:active {
+                    transform: translateY(3px);
+                }
+            }
+        }
+    }
+
+    .mobileImage {
+        display: none;
+    }
+    
+}
