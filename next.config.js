@@ -2,12 +2,6 @@
  * @type {import('next').NextConfig}
  */
 
-const nextConfig = {
-  output: "export",
-}
-
-module.exports = nextConfig
-
 const path = require('path')
 
 module.exports = {
@@ -15,3 +9,9 @@ module.exports = {
     includePaths: [path.join(__dirname, 'styles')],
   },
 }
+
+const nextConfig = {
+  output: "export",
+}
+
+module.exports = nextConfig
