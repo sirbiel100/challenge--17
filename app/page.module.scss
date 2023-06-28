@@ -18,11 +18,11 @@
     p{
         font-weight: 400;
         color: $CharcoalGrey;
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .textContent{
-        max-width: 80vw;
+        max-width: 80%;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -148,7 +148,7 @@
     display: none;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
     
     .section {
         width: auto;
@@ -164,6 +164,8 @@
         }
 
         .textContent {
+            max-width: 100%;
+            width: auto;
             .form{
                 .submitButton {
                     padding: 1.3em;

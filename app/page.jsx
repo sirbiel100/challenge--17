@@ -39,7 +39,7 @@ export default function Page() {
   
   const [itemVariants, setItemVariants] =  useState({ //buttons animation responsivity
     hover: {scale : 1.1},
-    tap: {scale : 0.9},
+    tap: {scale : 1},
     })
 
     useEffect(()=>{ //buttons animation responsivity
@@ -135,7 +135,7 @@ export default function Page() {
         variants={itemVariants}
         whileHover='hover'
         whileTap='tap'
-        transition={{ type: "spring", stiffness: 200, damping: 5 }}
+        transition={{ type: "spring", stiffness: 100, damping: 2 }}
         >Dismiss message
         </motion.button>
       </div> 
